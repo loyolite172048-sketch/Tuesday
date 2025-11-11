@@ -9,12 +9,12 @@ import org.testcontainers.utility.DockerImageName;
 @TestConfiguration(proxyBeanMethods = false)
 public class TestcontainersConfiguration {
 
-	@Bean
-	@ServiceConnection
-	public MySQLContainer<?> mysqlContainer() {
-		return new MySQLContainer<>(DockerImageName.parse("mysql:8.0"))
-				.withDatabaseName("catelog_service")
-				.withUsername("root")
-				.withPassword("vicky00950");
-	}
+  @Bean
+  @ServiceConnection
+  public MySQLContainer<?> mysqlContainer() {
+    return new MySQLContainer<>(DockerImageName.parse("mysql:8.0"))
+        .withDatabaseName("catelog_service")
+        .withUsername("root")
+        .withPassword("vicky00950");
+  }
 }
